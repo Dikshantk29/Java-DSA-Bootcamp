@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         
@@ -8,10 +8,15 @@ public class Main {
 
         System.out.println("Hello World");// ln represent next line
 
-        System.out.print("hello World");// print on the same line
+        System.out.println("hello World");// print on the same line
 
         //dattypes
         //int a=3;
+        Scanner sc= new Scanner(System.in);
+
+        System.out.println("Enter value");
+        Boolean value =sc.nextBoolean();
+        System.out.println(value);
 
     }
 }
