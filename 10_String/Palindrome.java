@@ -1,9 +1,9 @@
 
 public class Palindrome {
     public static void main(String[] args) {
-        String str = "malayalam";
+        String str = "madam";
         boolean value = checkPalindrome(str);
-        System.out.println(value);
+        System.out.println("it's palindrome: " + value);
 
     }
 
