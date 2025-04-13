@@ -13,8 +13,19 @@ public class First {
 
         System.out.println(str1.concat(str2));
 
-
         //charAt
         System.out.println(str1.charAt(0));
+
+        //camparision
+        System.out.println(str1.equals(str2));//return boolean value
+        System.out.println(str1.equalsIgnoreCase(str2));
+
+
+
+        //subString
+        System.out.println(str1.substring(1));
+        System.out.println(str1.substring(1, 2));//2 mean 2-1=>1   
+
+      
     }
 }
