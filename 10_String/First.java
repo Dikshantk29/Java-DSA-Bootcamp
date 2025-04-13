@@ -13,19 +13,24 @@ public class First {
 
         System.out.println(str1.concat(str2));
 
-        //charAt
+        // charAt
         System.out.println(str1.charAt(0));
 
-        //camparision
-        System.out.println(str1.equals(str2));//return boolean value
+        // camparision
+        System.out.println(str1.equals(str2));// return boolean value
         System.out.println(str1.equalsIgnoreCase(str2));
 
-
-
-        //subString
+        // subString
         System.out.println(str1.substring(1));
-        System.out.println(str1.substring(1, 2));//2 mean 2-1=>1   
+        System.out.println(str1.substring(1, 2));// 2 mean 2-1=>1
 
-      
+        // StringBuilder
+        StringBuilder sb = new StringBuilder(str1);
+        System.out.println(sb.reverse());
+        sb.append(0);
+        sb.append(1);
+        System.out.println(sb);
+        sb.toString();
+
     }
 }
