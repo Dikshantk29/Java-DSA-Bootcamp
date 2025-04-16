@@ -12,6 +12,17 @@ public class Bit {
          * right shift >>
          * unsigned right shift >>
          */
-        System.out.println((~(5)) & 1);
+      
+        int a = 123;
+        int b = 135;
+
+        System.out.println(a & b);
+        System.out.println(a | b);
+        System.out.println(a ^ b);
+        System.out.println(~a);
+        System.out.println(a << 2);
+        System.out.println(a >> 2);
+        System.out.println(a >>> 2);
+        
     }
 }
