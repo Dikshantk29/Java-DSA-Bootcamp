@@ -6,7 +6,7 @@ Welcome to my coding journey! This repository is a record of my progress as I le
 
 ## About Me
 
-Hi, I'm [Your Name], an aspiring developer passionate about technology and problem-solving. I'm new to coding, and I'm here to learn, experiment, and document my journey from the basics to more advanced topics.
+Hi, I'm Dikshant, an aspiring developer passionate about technology and problem-solving. I'm new to coding, and I'm here to learn, experiment, and document my journey from the basics to more advanced topics.
 
 ## Goals
 
