@@ -1,0 +1,1 @@
+isFound = lastOccurence(arr, i + 1, target)
