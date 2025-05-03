@@ -9,4 +9,14 @@ public class SumNatural {
         }
         return n + sum(n - 1);
     }
+
+    static void printFn (int n) {
+        if (n == 0) {
+            return; // Base case: do nothing
+        }
+        System.out.println(n); // Print the current number
+    }
 }
+
+
+
