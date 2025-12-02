@@ -1,4 +1,4 @@
-package Sorting;
+
 import java.util.*;
 import java.util.Collections;
 public class InbuitSort {

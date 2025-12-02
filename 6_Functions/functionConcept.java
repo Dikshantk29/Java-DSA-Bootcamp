@@ -1,4 +1,4 @@
-package Functions;
+
 
 public class functionConcept {
     public static void main(String[] args) {

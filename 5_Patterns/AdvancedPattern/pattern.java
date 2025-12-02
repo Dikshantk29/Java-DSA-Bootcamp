@@ -1,4 +1,4 @@
-package Patterns.AdvancedPattern;
+// package Patterns.AdvancedPattern;
 
 public class pattern {
     public static void main(String[] args) {
