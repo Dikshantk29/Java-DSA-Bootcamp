@@ -26,11 +26,13 @@ public class First {
 
         // StringBuilder
         StringBuilder sb = new StringBuilder(str1);
+        System.out.println(sb);
         System.out.println(sb.reverse());
         sb.append(0);
         sb.append(1);
         System.out.println(sb);
         sb.toString();
+        System.out.println(sb.toString());
 
     }
 }
