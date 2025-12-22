@@ -1,4 +1,5 @@
-package advanced;
+
+
 
 public class PairFriens {
     public static void main(String[] args) {

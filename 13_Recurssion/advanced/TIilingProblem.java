@@ -1,9 +1,8 @@
-package advanced;
 
 public class TIilingProblem {
     public static void main(String[] args) {
         
-        int n = 3; // Length of the board
+        int n = 5; // Length of the board
         System.out.println("Number of ways to tile a 2 x " + n + " board: " + tilingProblem(n));
         // Output: Number of ways to tile a 2 x 4 board: 5
 

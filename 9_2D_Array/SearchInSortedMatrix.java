@@ -9,7 +9,7 @@ public class SearchInSortedMatrix {
         int target = 5;
 
         System.out.println(search(arr, target)); // Brute force
-        System.out.println(search(arr, target, 0, arr[0].length - 1)); // Recursive efficient
+        System.out.println(search(arr, target, 0, arr[0].length - 1)); 
     }
 
     // Brute-force search
