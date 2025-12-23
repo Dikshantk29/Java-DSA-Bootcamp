@@ -1,3 +1,4 @@
+
 class BinaryString{
     public static void main(String[] args) {
         int n = 3; // Length of binary strings

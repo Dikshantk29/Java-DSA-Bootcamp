@@ -1,6 +1,4 @@
 
-
-
 import java.util.Arrays;
 
 public class Merge_Sort {
@@ -25,6 +23,7 @@ public class Merge_Sort {
     }
 
     public static void mergeAlgo(int[] arr, int si, int mi, int ei) {
+       
         int temp[] = new int[ei - si + 1];
         int i = si;// left
         int j = mi + 1;// right
@@ -35,32 +34,30 @@ public class Merge_Sort {
             if (arr[i] < arr[j]) {
                 temp[k] = arr[i];
                 i++;
-               
 
             } else {
                 temp[k] = arr[j];
                 j++;
-               
+
             }
             k++;
         }
 
-        while (i<=mi) {
-            temp[k++]=arr[i++];
-            
+        while (i <= mi) {
+            temp[k++] = arr[i++];
+
         }
-         while (j<=ei) {
-            temp[k++]=arr[j++];
-            
+        while (j <= ei) {
+            temp[k++] = arr[j++];
+
         }
 
-        for(k=0,i=si; k < temp.length; k++,i++){
+        
+        for (k = 0, i = si; k < temp.length; k++, i++) {
             arr[i] = temp[k];
         }
-
-
-      
-
+       
+        
 
     }
 }
