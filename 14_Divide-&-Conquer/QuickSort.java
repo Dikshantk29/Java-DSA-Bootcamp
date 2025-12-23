@@ -1,5 +1,7 @@
 import java.util.Arrays;
-
+//time complexity = O(nlogn)
+//space complexity = O(logn)
+//worst case time complexity = O(n^2)
 public class QuickSort {
     public static void main(String[] args) {
         int arr[] ={7,6,5,4,3,2,1};
@@ -14,6 +16,7 @@ public class QuickSort {
         if (s >= e) {
             return;
         }
+        
         // lastlement
         int pivotIndex = partition(arr, s, e);
         quickSort(arr, s, pivotIndex - 1);// left part
@@ -26,7 +29,7 @@ public class QuickSort {
 
         int i = s - 1;// to make place for element smaller than pivot
 
-        for (int j = s; j < e; j++) {
+        for (int j = s; j < e; j++){
             if (arr[j] <= pivot) {
                 i++;
                 int temp = arr[j];
