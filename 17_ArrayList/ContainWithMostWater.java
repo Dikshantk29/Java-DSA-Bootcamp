@@ -37,4 +37,7 @@ public class ContainWithMostWater {
         }
         return maxArea;
     }
+
+    // vs trapping rain water
+    // This problem is different from trapping rain water because here we are looking for the maximum area between two lines, not the maximum amount of water that can be stored.
 }
