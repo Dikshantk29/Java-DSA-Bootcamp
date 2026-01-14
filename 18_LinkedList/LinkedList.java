@@ -1,11 +1,13 @@
+import javax.swing.JSpinner.DefaultEditor;
+
 public class LinkedList {
 
-    /* =======================
-       Node class (Inner Class)
-       ======================= */
+    /*
+     * ======================= Node class (Inner Class) =======================
+     */
     class Node {
-        int data;      // value stored in node
-        Node next;     // reference to next node
+        int data; // value stored in node
+        Node next; // reference to next node
 
         // constructor
         public Node(int data) {
@@ -14,16 +16,16 @@ public class LinkedList {
         }
     }
 
-    /* =======================
-       LinkedList properties
-       ======================= */
-    public static Node head;   // first node
-    public static Node tail;   // last node
-    public static int size;    // total number of nodes
+    /*
+     * ======================= LinkedList properties =======================
+     */
+    public static Node head; // first node
+    public static Node tail; // last node
+    public static int size; // total number of nodes
 
-    /* =======================
-       Add at beginning
-       ======================= */
+    /*
+     * ======================= Add at beginning =======================
+     */
     public void addFirst(int data) {
 
         // 1. Create new node
@@ -43,9 +45,9 @@ public class LinkedList {
         head = newNode;
     }
 
-    /* =======================
-       Add at end
-       ======================= */
+    /*
+     * ======================= Add at end =======================
+     */
     public void addLast(int data) {
 
         // 1. Create new node
@@ -65,9 +67,9 @@ public class LinkedList {
         tail = newNode;
     }
 
-    /* =======================
-       Print LinkedList
-       ======================= */
+    /*
+     * ======================= Print LinkedList =======================
+     */
     public void print() {
 
         // Check if list is empty
@@ -88,9 +90,9 @@ public class LinkedList {
         System.out.println("null");
     }
 
-    /* =======================
-       Add at specific index
-       ======================= */
+    /*
+     * ======================= Add at specific index =======================
+     */
     public void add(int idx, int data) {
 
         // If index is 0, add at beginning
@@ -118,9 +120,9 @@ public class LinkedList {
         temp.next = newNode;
     }
 
-    /* =======================
-       Remove first element
-       ======================= */
+    /*
+     * ======================= Remove first element =======================
+     */
     public int removeFirst() {
 
         // Case 1: Empty list
@@ -144,9 +146,9 @@ public class LinkedList {
         return val;
     }
 
-    /* =======================
-       Remove last element
-       ======================= */
+    /*
+     * ======================= Remove last element =======================
+     */
     public int removeLast() {
 
         // Case 1: Empty list
@@ -179,9 +181,9 @@ public class LinkedList {
         return val;
     }
 
-    /* =======================
-       Iterative search
-       ======================= */
+    /*
+     * ======================= Iterative search =======================
+     */
     public int iteratorSearch(int key) {
 
         Node temp = head;
@@ -199,9 +201,9 @@ public class LinkedList {
         return -1;
     }
 
-    /* =======================
-       Recursive search helper
-       ======================= */
+    /*
+     * ======================= Recursive search helper =======================
+     */
     public int helper(Node head, int key) {
 
         // Base case: end of list
@@ -226,16 +228,63 @@ public class LinkedList {
         return idx + 1;
     }
 
-    /* =======================
-       Recursive search
-       ======================= */
+    /*
+     * ======================= Recursive search =======================
+     */
     public int recursivesearch(int key) {
         return helper(head, key);
     }
 
-    /* =======================
-       Main method
-       ======================= */
+    /*
+     * ======================= Reverse LinkedList =======================
+     */
+    public void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next = null;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+    /*
+     * ======================= Delete Nth node from end =======================
+     */
+    public void deleteNthFromEnd(int n) {
+       int size =0;
+       Node temp = head;
+       while (temp != null) {
+         temp = temp.next;
+         size++;
+       }
+
+       if(n == size){
+        head = head.next;
+        return;
+
+       }
+
+       int i =1;
+       int iToFind = size-n;
+       Node prev= head;
+
+       while(i < iToFind){
+         prev = prev.next;
+         i++;
+       }
+       prev.next = prev.next.next;
+       return;
+    }    
+    
+    
+
+    /*
+     * ======================= Main method =======================
+     */
     public static void main(String[] args) {
 
         LinkedList ll = new LinkedList();
@@ -283,5 +332,13 @@ public class LinkedList {
         // Recursive search
         System.out.println(ll.recursivesearch(10));
         System.out.println(ll.recursivesearch(4));
+
+        // Reverse the linked list
+        ll.reverse();
+        ll.print();
+
+        //delete the nth node from the end
+        ll.deleteNthFromEnd(3);
+        ll.print();
     }
 }
