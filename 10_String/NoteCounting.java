@@ -6,7 +6,7 @@ public class NoteCounting {
         System.out.println();
         countNotes2(notes);
     }
-
+    //complexity O(n) and space O(1)
     static void countNotes(String notes) {
         int count = 1;
         for (int i = 1; i <= notes.length(); i++){
@@ -21,6 +21,7 @@ public class NoteCounting {
     }
 
     //using stringbuilder
+    //complexity O(n) and space O(n)
     static void countNotes2(String notes) {
         StringBuilder sb = new StringBuilder();
         int count = 1;

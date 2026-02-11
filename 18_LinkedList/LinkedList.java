@@ -278,7 +278,48 @@ public class LinkedList {
        }
        prev.next = prev.next.next;
        return;
-    }    
+    } 
+    
+    //detect is cycle/loop exists in linked list
+    public boolean isCycle(Node head){
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+    //remove cycle from linked list
+    public void removeCycle(Node head){
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                cycle = true;
+                break;
+            }
+        }
+        if(cycle == false){
+            return;
+        }       
+        slow = head;
+        Node prev = null; // to keep track of node before fast
+        while(slow != fast){
+            prev = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        // fast is at last node of cycle, so break the cycle
+        prev.next = null;
+    }
+    
     
     
 
@@ -340,5 +381,8 @@ public class LinkedList {
         //delete the nth node from the end
         ll.deleteNthFromEnd(3);
         ll.print();
+
+        //detect cycle in linked list
+        System.out.println(ll.isCycle(head)); // false
     }
 }
