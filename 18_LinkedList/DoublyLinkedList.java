@@ -81,6 +81,22 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
+
+    //reverse Double linked list
+    public void reverseList() {
+        Node curr = head;
+        Node prev= null;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next; // Update prev pointer
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
         dll.addLast(1);
@@ -105,6 +121,11 @@ public class DoublyLinkedList {
         dll.printList();
         dll.addLast(6);
         System.out.println("After adding last:");
+        dll.printList();
+
+
+        dll.reverseList();
+        System.out.println("After reversing the list:");
         dll.printList();
     }
 }
