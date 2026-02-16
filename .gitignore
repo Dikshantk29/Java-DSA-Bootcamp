@@ -3,4 +3,5 @@ images/
 logs/
 readme.js.md
 .js.md
-.class
+
+*.class
