@@ -1,5 +1,5 @@
 ﻿# Java-DSA-Bootcamp
-![alt text](images/mentor.png)
+![alt text](images\mentor.png)
 # My Coding Journey
 
 Welcome to my coding journey! This repository is a record of my progress as I learn the fundamentals of programming and build small projects. I'm excited to share my experiences, challenges, and victories as I embark on this path.
