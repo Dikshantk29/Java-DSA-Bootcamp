@@ -26,7 +26,6 @@ public class mergeLL {
         System.out.println("Sorted List:");
         list.printList(head);
 
-        
     }
 
     // Merge Sort for Linked List
@@ -50,7 +49,7 @@ public class mergeLL {
     // Find middle of linked list
     private Node getMid(Node head) {
         Node slow = head;
-        Node fast = head.next;
+        Node fast = head.next;// to get mid at first half for even length linked list
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -89,7 +88,4 @@ public class mergeLL {
         System.out.println();
     }
 
-
-
-    
 }

@@ -43,6 +43,9 @@ public class NextGreaterElement {
             }
 
             s.push(arr[i]); // Push current element onto stack
+           
+           
+           //                                          System.out.println(s); // Print stack after each iteration for debugging
         }
     }
 }

@@ -1,4 +1,5 @@
 import java.util.Stack;
+
 public class ValidParenthess {
     public static void main(String[] args) {
         String s = "({[]})";
@@ -13,12 +14,10 @@ public class ValidParenthess {
                 stack.push(c);
             } else {
                 if (stack.isEmpty()) {
-                    return false; // No opening bracket for the current closing bracket
+                    return false; // No matching opening bracket
                 }
                 char top = stack.pop();
-                if ((c == ')' && top != '(') ||
-                    (c == '}' && top != '{') ||
-                    (c == ']' && top != '[')) {
+                if ((c == ')' && top != '(') || (c == '}' && top != '{') || (c == ']' && top != '[')) {
                     return false; // Mismatched brackets
                 }
             }

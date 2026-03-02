@@ -311,7 +311,7 @@ public class LinkedList {
         }       
         slow = head;
         Node prev = null; // to keep track of node before fast
-        while(slow != fast){
+        while(slow != fast){ //fast 
             prev = fast;
             slow = slow.next;
             fast = fast.next;
