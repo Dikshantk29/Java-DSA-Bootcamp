@@ -36,27 +36,27 @@ public class ImplementationOfQueueUsingLinkedList {
 
         }
 
-        //remove
-        public static int remove(){
-            if(isEmpty()){
+        // remove
+        public static int remove() {
+            if (isEmpty()) {
                 System.out.println("Empty Queue");
                 return -1;
 
             }
             int front = head.data;
 
-            if(tail == head){
+            if (tail == head) {
                 tail = head = null;
-            }else{
+            } else {
                 head = head.next;
             }
 
             return front;
         }
 
-        //peek
-        public static int peek(){
-            if(isEmpty()){
+        // peek
+        public static int peek() {
+            if (isEmpty()) {
                 System.out.println("Empty Queue");
                 return -1;
             }
@@ -65,7 +65,7 @@ public class ImplementationOfQueueUsingLinkedList {
     }
 
     public static void main(String[] args) {
-         Queue q = new Queue();
+        Queue q = new Queue();
 
         q.add(1);
         q.add(2);
@@ -74,7 +74,8 @@ public class ImplementationOfQueueUsingLinkedList {
         while (!q.isEmpty()) {
             System.out.println(q.peek());
             q.remove();
-        
-        }}
-    
+
+        }
+    }
+
 }
