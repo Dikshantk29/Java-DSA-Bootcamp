@@ -16,12 +16,12 @@ public class FirstNonRepeatingCharacter {
             if (freq[ch - 'a'] == 1) {
                 System.out.println("First non-repeating character is: " + ch);
                 break;
-            }else if (i == str.length() - 1) {
+            } else if (i == str.length() - 1) {
                 System.out.println("No non-repeating character found.");
             }
         }
 
-        //calling queue approach
+        // calling queue approach
         firstNonRepeatingCharacter(str);
     }
 

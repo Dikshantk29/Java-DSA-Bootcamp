@@ -6,6 +6,7 @@ public class Stack_By_LinkedList {
 
         Node(int data) {
             this.data = data;
+            this.next = null;
         }
     }
 

@@ -27,7 +27,8 @@ public class StackUsing2Queue {
             }
             int top = -1;
 
-            //case 1: if q1 is not empty, remove from q1 and add to q2 except the last one
+            //case 1: if q1 is not empty, remove from q1 and
+            //  add to q2 except the last one
             if(!q1.isEmpty()){
                 while(!q1.isEmpty()){
                     top = q1.remove();
@@ -36,7 +37,8 @@ public class StackUsing2Queue {
                     }
                     q2.add(top);
                 }
-            }else{ //case 2: if q2 is not empty, remove from q2 and add to q1 except the last one
+            }else{ //case 2: if q2 is not empty, 
+            // remove from q2 and add to q1 except the last one
                 while(!q2.isEmpty()){
                     top = q2.remove();
                     if(q2.isEmpty()){

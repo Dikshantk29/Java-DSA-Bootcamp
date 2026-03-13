@@ -17,7 +17,7 @@ public class ImplementationOfQueueUsingLinkedList {
         static Node tail = null;
 
         public static boolean isEmpty() {
-            return head == null && tail == null;
+            return head == null && tail == null; 
         }
 
         // no need of full because its not its is ll

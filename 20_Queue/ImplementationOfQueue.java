@@ -1,5 +1,5 @@
 public class ImplementationOfQueue {
-
+// Circular Queue Implementation
     static class Queue {
 
         int[] arr;
