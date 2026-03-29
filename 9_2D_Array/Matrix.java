@@ -13,4 +13,10 @@ public class Matrix {
         }
     }
 
+    /* 
+    Row Major means that the elements of the rows of the matrix are stored in contiguous memory locations.
+    
+    Column Major means that the elements of the columns of the matrix are stored in contiguous memory locations
+    */
+
 }

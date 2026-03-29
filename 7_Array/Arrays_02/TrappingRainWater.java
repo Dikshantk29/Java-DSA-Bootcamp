@@ -2,7 +2,7 @@ package Arrays_02;
 
 public class TrappingRainWater {
     public static void main(String[] args) {
-        int[] height = { 4, 2, 0, 6, 3, 2, 5 };
+        int[] height = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
         int value = approach_1(height);
         System.out.println("Trapped water level: "+value);
 

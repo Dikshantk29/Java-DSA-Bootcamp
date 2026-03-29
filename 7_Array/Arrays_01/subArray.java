@@ -1,4 +1,8 @@
+package Arrays_01;
 public class subArray {
+    //Question: Given an array of integers,
+    //print all the subarrays of the given array and also
+    //find the maximum and minimum sum of the subarrays.
     public static void main(String[] args) {
         int[] arr = {2,4,6,8,10};
         printSubArray(arr);

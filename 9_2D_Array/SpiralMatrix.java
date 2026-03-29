@@ -6,46 +6,50 @@ public class SpiralMatrix {
                 { 9, 10, 11, 12 },
                 { 13, 14, 15, 16 }
         };
+        /* 1 -> 2 -> 3 -> 4
+         -> 8 -> 12 -> 16 -> 
+         15 -> 14 -> 13 -> 9 -> 
+         5 -> 6 -> 7 -> 11 -> 10 */
         spiralPrint(arr);
     }
 
     static void spiralPrint(int[][] arr) {
-        int rows = arr.length;
-        int cols = arr[0].length;
-
-        int startRow = 0, endRow = rows - 1;
-        int startCol = 0, endCol = cols - 1;
-
-        while (startRow <= endRow && startCol <= endCol) {
-            // top
-            for (int j = startCol; j <= endCol; j++) {
-                System.out.print(arr[startRow][j] + " ");
+        int top =0;
+        int bottom = arr.length - 1;
+        int left  = 0;
+        int right = arr[0].length -1;
+    
+        while(top <= bottom && left <= right){
+        
+            //left to right 
+            for(int i = left; i<= right ;i++){
+                System.out.print(arr[top][i]+ " ");
             }
+            top++;
 
-            // right
-            for (int i = startRow + 1; i <= endRow; i++) {
-                System.out.print(arr[i][endCol] + " ");
+            //top to bottom 
+            for(int j=top ;j<= bottom;j++){
+                System.out.print(arr[j][right]+" ");
             }
+            right--;
 
-            // bottom
-            if (startRow < endRow) {
-                for (int j = endCol - 1; j >= startCol; j--) {
-                    System.out.print(arr[endRow][j] + " ");
+            //right to left 
+            while(top<= bottom){
+                for(int k=right;k>= left;k--){
+                    System.out.print(arr[bottom][k]+" ");
                 }
-            }
+                bottom--;
 
-            // left
-            if (startCol < endCol) {
-                for (int i = endRow - 1; i > startRow; i--) {
-                    System.out.print(arr[i][startCol] + " ");
+            }
+            //bottom to top
+            while(left <= right){
+                for(int l=bottom;l>= top;l--){
+                    System.out.print(arr[l][left]+" ");
                 }
+                left++;
             }
-
-            startRow++;
-            endRow--;
-            startCol++;
-            endCol--;
         }
+        
         System.out.println();
     }
 }

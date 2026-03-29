@@ -8,10 +8,10 @@ public class BuySellStock {
     }
 
     public static int approach(int price[]) {
-        int buyPrice = Integer.MAX_VALUE;
-        int maxProfit = 0;
+        int buyPrice = price[0];
+        int maxProfit = 0; 
 
-        for (int i = 0; i < price.length; i++) {
+        for (int i = 1; i < price.length; i++) {
             if (buyPrice < price[i]) {
                 int profit = price[i] - buyPrice;// today's profit
                 maxProfit = Math.max(maxProfit, profit);

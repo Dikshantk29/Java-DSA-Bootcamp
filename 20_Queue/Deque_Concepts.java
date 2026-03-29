@@ -1,6 +1,6 @@
-
 import java.util.Deque;
 import java.util.LinkedList;
+
 public class Deque_Concepts {
     //deque - double ended queue
     public static void main(String[] args) {

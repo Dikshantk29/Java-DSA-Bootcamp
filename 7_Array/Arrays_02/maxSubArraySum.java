@@ -1,11 +1,13 @@
 package Arrays_02;
+
 public class maxSubArraySum {
 
     public static void main(String[] args) {
-        int[] arr = { -1, -2, -3, -4, -5 };
-         maxSubarray(arr);
-         PrefixSumApproach(arr);
-         KadanesAlgorithm(arr);
+        int[] arr = { 1, -2, 6, -1, 3 };
+        maxSubarray(arr);
+        PrefixSumApproach(arr);
+        KadanesAlgorithm(arr);
+        KadanesAlgorithm2(arr);
     }
 
     static void maxSubarray(int[] arr) {
@@ -43,7 +45,7 @@ public class maxSubArraySum {
             prefix[i] = prefix[i - 1] + arr[i];
         }
 
-        int maxSum = Integer.MIN_VALUE; // Start with smallest possible value instead of 0
+        int maxSum = Integer.MIN_VALUE; // Start with smallest possible value instead of 0.
         int currSum;
 
         for (int i = 0; i < arr.length; i++) {
@@ -86,6 +88,19 @@ public class maxSubArraySum {
             if (currSum < 0) {
                 currSum = 0;
             }
+        }
+
+        System.out.println("max sum of subarray: " + maxSum);
+    }
+
+    // other way of writing Kadanes Algorithm
+    static void KadanesAlgorithm2(int[] arr) {
+        int currSum = arr[0];
+        int maxSum = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            currSum = Math.max(arr[i], currSum + arr[i]);
+            maxSum = Math.max(maxSum, currSum);
         }
 
         System.out.println("max sum of subarray: " + maxSum);
