@@ -2,8 +2,8 @@
 
 public class star {
     public static void main(String[] args) {
-        // printStar1(5);
-        // printStar2(5);
+        printStar1(5);
+        printStar2(5);
         printStar6(7);
     }
 
