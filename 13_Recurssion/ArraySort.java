@@ -22,6 +22,7 @@ public class ArraySort {
         if (arr[i] > arr[i + 1]) {
             return false;
         }
+        
         return isSorted(arr, i + 1);
     }
 
