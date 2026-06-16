@@ -72,6 +72,7 @@ class Solution {
     }
 }
 
+//problem statement - Given an array of jobs with their deadlines and profits, find the maximum number of jobs that can be done and the maximum profit.
 public class JobSquencing {
 
     public static void main(String[] args) {
